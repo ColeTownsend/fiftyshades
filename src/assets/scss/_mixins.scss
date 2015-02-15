@@ -1,0 +1,36 @@
+@mixin bg($color, $darken) {
+  // local variables
+  $background-color: darken($color, $darken);
+  $lightness: lightness($background-color);
+
+  // calculate text color variable
+  @if $lightness < 50 {
+    $text-color: lighten($background-color, 15);
+    $background-color: desaturate($background-color, 7);
+    background: $background-color;
+    color: $text-color;
+  }
+  @else {
+    $text-color: darken($background-color, 15);
+    $background-color: desaturate($background-color, 6);
+    background: $background-color;
+    color: $text-color;
+  }
+
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

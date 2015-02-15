@@ -1,0 +1,10 @@
+@for $i from 1 through 50 {
+  .#{$class-slug}-#{$i} {
+    @include bg($beige-base, $i);
+  }
+}
+
+.color-block {
+  width: 100%;
+  padding: 3rem;
+}

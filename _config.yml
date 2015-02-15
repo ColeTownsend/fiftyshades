@@ -1,0 +1,47 @@
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: Fifty Shades of Greige
+description: Not quite grey. A little warmer.
+tagline: Because grey is better when its beige.
+url: localhost:4000
+class_slug: greige
+share: 'https://twitter.com/intent/tweet?text=50 Shades of Greige&via=twnsnd.co&url=http://fiftyshadesofgreige.co&hashtags=fiftyshades'
+
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: src
+destination: serve
+
+# Same as the title etc for your site but can instead be
+# called by using 'site.author.name' and so on
+author:
+  name: Cole
+  email: cole@coletownsend.com
+  bio: I'm just happy to be here. Co-founder of Meeet Co. Designer of The News App. Curator of New Old Stock. Soon to be apprentice at Thoughtbot.
+  twitter: http://twitter.com/twnsnd.co
+
+# general setting for Jekyll
+googleAnalytics: UA-XXXXX-X
+
+# _config.build.yml overwrites these options when you run `gulp build`
+# Enables future posts (posts with dates in the future) and drafts
+future: true
+show_drafts: true
+# Disables the more accurate related posts for faster generating of the site
+lsi: false
+# Only make the last 10 posts so generating isn't slow
+limit_posts: 10
+
+# Permalink structure and pagination options
+relative_permalinks: true
+permalink: pretty
+paginate: 1
+paginate_path: 'page:num'
+excerpt_separator: '<!--more-->'
+
+# Markdown library
+markdown: redcarpet
+# Markdown library options
+redcarpet:
+  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
+              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
+highlighter: true

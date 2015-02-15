@@ -1,0 +1,56 @@
+// colors
+
+.bg-beige {
+  background: $beige-base;
+}
+
+.bg-dark-beige {
+  background: darken($beige-base, 20);
+}
+
+.text-beige {
+  color: darken($beige-base, 20);
+}
+
+// decoration
+
+.no-dec {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+// height
+.height-min {
+  min-height: 420px;
+}
+
+// font
+
+.ng {
+  font-family: "ng", "Nitti Grotesk", "Karla";
+}
+
+// animation
+
+@include keyframes(pulsate) {
+  0% {
+    background: $beige-base;
+    color: darken($beige-base, 10) !important; }
+
+  50% {
+    background: darken($beige-base, 20);
+    color: darken($beige-base, 30) !important; }
+
+  100% {
+    background: $beige-base;
+    color: darken($beige-base, 10) !important; } }
+
+.bg-pulsate {
+  -webkit-animation: pulsate 5s linear infinite;
+  animation: pulsate 5s linear infinite;
+  animation-fill-mode: both;
+}
+
+pre {
+  margin: 0;
+}

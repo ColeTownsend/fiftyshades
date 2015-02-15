@@ -1,0 +1,12 @@
+{% for i in (1..50) %}
+{% capture filler %}
+  {% cycle 'What is it about elevators?', 'Laters&comma; baby.', '', 'I gasp&comma; and I&apos;m Eve in the Garden of Eden.', ,'Raising the ordinary to the extraordinary&period;' 'I am going to have coffee with Christian Grey...' %}
+{% endcapture %}
+<div class="{{ site.class_slug }}-{{ i }} color-block fl ttu wi-50-l wi-100">
+  <div class="dt">
+    <div class="dtc v-mid">
+      <p class="mb0 tracked tc center">{{ filler }}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}

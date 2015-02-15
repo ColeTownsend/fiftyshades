@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  {% include head.html %}
+
+  <body class="ng">
+    <section class="bg-pulsate dt h-50 pvx pvxl-ns">
+      <div class="dtc v-mid">
+        <div class="mw8 phm phl-ns tl">
+          <h2 class="fwn">
+            <small class="db tl ttu f5 book text-beige">{{ site.tagline }}</small>
+            <a class="db tl fwn link f1-ns f2 under" target="_blank" href="{{ site.share }}" title="Share">{{ site.title }}</a>
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="wi-100 db cf">{% include colors-loop.html %}</div>
+    <div class="wi-100 dn db-ns">
+        <pre class="pos-rel height-min">
+          <code class="code wi-100 scss hljs pos-abs top-0 bottom-0">
+            @mixin bg($color, $darken) {
+              // local variables
+              $background-color: darken($color, $darken);
+              $lightness: lightness($background-color);
+
+              // calculate text color variable
+              @if $lightness < 50 {
+                $text-color: lighten($background-color, 15);
+                $background-color: desaturate($background-color, 7);
+                background: $background-color;
+                color: $text-color;
+              }
+              @else {
+                $text-color: darken($background-color, 15);
+                $background-color: desaturate($background-color, 6);
+                background: $background-color;
+                color: $text-color;
+              }
+            }
+            </code>
+        </pre>
+    </div>
+    <footer class="dt h-50 pvx pvxl-ns">
+      <div class="dtc v-mid">
+        <div class="mw8 phm phl-ns tl">
+          <h2 class="fwn text-beige">
+            <small class="db tl ttu f5 book">{{ site.tagline }}</small>
+            <a class="db tl fwn no-dec f1-ns f2 text-beige" target="_blank" href="{{ site.share }}" title="Share">{{ site.title }}</a>
+          </h2>
+          <p class="book f3 text-beige">A small project by <a class="link underline" href="http://twnsnd.co">Cole Townsend</a> made with <a class="link underline" target="_blank" href="http://tachyons.io">Tachyions</a>.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
