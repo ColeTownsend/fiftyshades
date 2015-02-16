@@ -5,6 +5,8 @@ var gulp = require("gulp");
 // Loads the plugins without having to list all of them, but you need
 // to call them as $.pluginname
 var $ = require("gulp-load-plugins")();
+// call gh-pages
+var deploy      = require("gulp-gh-pages");
 // "del" is used to clean out directories and such
 var del = require("del");
 // BrowserSync isn"t a gulp package, and needs to be loaded manually
@@ -100,7 +102,7 @@ gulp.task("html", ["styles"], function () {
       removeComments: true,
       removeCommentsFromCDATA: true,
       removeCDATASectionsFromCDATA: true,
-      collapseWhitespace: true,
+      collapseWhitespace: false,
       collapseBooleanAttributes: true,
       removeAttributeQuotes: true,
       removeRedundantAttributes: true
@@ -108,18 +110,6 @@ gulp.task("html", ["styles"], function () {
     // Send the output to the correct folder
     .pipe(gulp.dest("site"))
     .pipe($.size({title: "optimizations"}));
-});
-
-
-// Task to upload your site to your personal GH Pages repo
-gulp.task("deploy", function () {
-  // Deploys your optimized site, you can change the settings in the html task if you want to
-  return gulp.src("./site/**/*")
-    .pipe($.ghPages({
-      // Currently only personal GitHub Pages are supported so it will upload to the master
-      // branch and automatically overwrite anything that is in the directory
-      branch: "master"
-      }));
 });
 
 // Run JS Lint against your JS
@@ -182,3 +172,19 @@ gulp.task("build", ["jekyll:prod", "styles"], function () {});
 gulp.task("publish", ["build"], function () {
   gulp.start("html", "copy", "images", "fonts");
 });
+
+// Task to upload your site to your personal GH Pages repo
+gulp.task("deploy", ["publish"] function () {
+  // Deploys your optimized site, you can change the settings in the html task if you want to
+  return gulp.src("./site/**/*")
+    .pipe($.ghPages({
+      // Currently only personal GitHub Pages are supported so it will upload to the master
+      // branch and automatically overwrite anything that is in the directory
+      // branch: "master"
+      }));
+});
+
+// gulp.task("gh-pages", ["build", "copy", "images", "fonts"], function () {
+//     return gulp.src(["./site/**/*","./_config.yml"])
+//         .pipe(deploy());
+// });
