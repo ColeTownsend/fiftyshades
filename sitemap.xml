@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>fiftyshades.twnsnd.co/</loc>
+    <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+    <url>
+      <loc>fiftyshades.twnsnd.co/jekyll/2014/03/03/welcome-to-jekyll/</loc>
+      
+        <lastmod>2014-03-03T00:00:00-05:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+  
+    <url>
+      <loc>fiftyshades.twnsnd.co/jekyll/poole/2014/03/02/introducing-poole/</loc>
+      
+        <lastmod>2014-03-02T00:00:00-05:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+  
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/404/</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/about/</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/atom.xml</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/sitemap.xml</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+  <url>
+    <loc>fiftyshades.twnsnd.co/page2/</loc>
+    
+      <lastmod>2015-02-16T08:39:16-05:00</lastmod>
+    
+    
+      <changefreq>monthly</changefreq>
+    
+    
+      <priority>0.3</priority>
+    
+  </url>
+  
+</urlset>
